@@ -1,19 +1,21 @@
 # VizNet: Data, System, and Analysis
+This repository includes scripts to **retrieve the four corpora** (Plotly, ManyEyes, Webtables, Open Data Portal) included in VizNet, **characterize those datasets** with statistical features, **sample high-quality datasets** within constraints to replicate Kim and Heer (EuroVis 2018), and **run the experimental system** for crowdsourced evaluation.
 
 ## What is VizNet?
-Collecting, curating, and cleaning data is a laborious and expensive process. Visualization researchers have relied on running studies with ad hoc, sometimes synthetically generated, datasets. However, such datasets do not display the same characteristics as data found in the wild.
+Collecting, curating, and cleaning data is a laborious and expensive process. Visualization researchers have relied on running studies with ad hoc, sometimes synthetically generated, datasets. However, such datasets do not display the same characteristics as data found in the wild. **VizNet is a centralized and large-scale repository of data** as used _in practice_, compiled from the web, open data repositories, and online visualization platforms.
 
-**VizNet is a centralized and large-scale repository of data** as used _in practice_, compiled from the web, open data repositories, and online visualization platforms. This repository includes scripts to **retrieve the four corpora** (Plotly, ManyEyes, Webtables, Open Data Portal), but also provides scripts to **characterize those datasets** with statistical features, **sample high-quality CQQ datasets** within constraints to replicate Kim and Heer (EuroVis 2018), and run the **experimental system** for crowdsourced evaluation.
+<img src="/assets/teaser.png" width="100%" />
 
-<img src="/assets/teaser.png" width="600" />
+_VizNet enables data scientists and visualization researchers to aggregate data, enumerate visual encodings, and crowdsource
+effectiveness evaluations._
 
 ## What is VizNet useful for?
 
-Researchers can use the VizNet repository to **conduct studies with real world data**. For example, we have used VizNet to [replicate](/assets/replication_results.png) a [study assessing the effect](https://idl.cs.washington.edu/files/2018-TaskDataEffectiveness-EuroVis.pdf) of task and data distribution on the effectiveness of visual encodings and train a machine learning model to [predict perceptual effectiveness](/assets/gbr_log_response_time_regression.png) of _(data, visualization, task) triplets_. We provide scripts for [sampling high-quality data](/experiment/sample_CQQ_specs_with_data.py) subject to experimental constraints, [verifying data quality](/experiment/Data%20Quality%20Assessment.ipynb), and a [system](/experiment/system) for evaluating effectiveness. We will provide anonymized experimental results and associated analysis scripts.
+Researchers can use the VizNet repository to **conduct studies with real world data**. For example, we have used VizNet to [replicate](/assets/replication_results.png) a [study assessing the influence](https://idl.cs.washington.edu/files/2018-TaskDataEffectiveness-EuroVis.pdf) of task and data distribution on the effectiveness of visual encodings. We then train a machine learning model to [predict perceptual effectiveness](/assets/gbr_log_response_time_regression.png) of _(data, visualization, task) triplets_. Such learned models could be used to power visualization recommendation systems. We also provide scripts for [sampling high-quality data](/experiment/sample_CQQ_specs_with_data.py) subject to experimental constraints, [verifying data quality](/experiment/Data%20Quality%20Assessment.ipynb) of samples, and a [system](/experiment/system) for crowdsourcing effectiveness evaluations. We will provide anonymized experimental results and associated analysis scripts shortly.
 
-If experiment design demands the use of synthetically generated data, researchers can **assess the ecological validity of synthetic data** by comparing against real world distributions. We provide an [overview](assets/datasets-one-pager.pdf) of statistical properties of datasets within VizNet, a [script](characterization/extract_features.py) for extracting statistical features from the corpora, a [notebook](characterization/Descriptive%20Statistics.ipynb) for characterizing the features, and a [notebook](experiment/Cluster%20CQQ%20Features.ipynb) for clustering datasets based on features, as shown below:
+<img align="left" width="250" src="assets/tsne-only-viznet.png" />
 
-<img src="/assets/datasets-one-pager.png" width="600" />
+If experiment design demands the use of synthetically generated data, researchers can **assess the ecological validity of synthetic data** by comparing against real distributions. We provide an [overview](assets/datasets-one-pager.pdf) of statistical properties of datasets within VizNet, a [script](characterization/extract_features.py) for extracting statistical features from the corpora, a [notebook](characterization/Descriptive%20Statistics.ipynb) for characterizing the features, and a [notebook](experiment/Cluster%20CQQ%20Features.ipynb) for clustering datasets embedded two-dimensional latent space, as shown in the figure to the left. Each data point is a table from one of the four data sources included in VizNet, which is encoded using color.
 
 By using data from the VizNet repository, or data characterized along similar dimensions, researchers can compare design techniques against a common baseline.
 
@@ -43,14 +45,28 @@ helpers/
 ```
 
 ## How do I use this repository?
-How you use VizNet depends on your use case. For users who want to **access the raw data**, we store the four corpora are in an Amazon S3 bucket. To download and unzip the data, run `sh ./retrieve_corpora.sh` in the `raw` directory. Note that the uncompressed datasets take up ~657Gb. We will provide samples of the dataset shortly.
+This repository supports multiple usecases. For users who want to **access the raw data**, we store the four corpora in an Amazon S3 bucket. To download and unzip the data, run `sh ./retrieve_corpora.sh` in the `raw` directory. Note that the uncompressed datasets take up ~657Gb. We will provide samples of the dataset shortly.
 
 If you want to **run the code**, note that all processing scripts and notebooks are written in Python 3. To get started:
 1. In the base directory, initialize and activate virtual environment: `virtualenv -p python3 venv && source venv/bin/activate`
 2. Install Python dependencies: `pip install -r requirements.txt`
-3. Start Jupyter notebook or Jupyter lab: `jupyter notebook` or `jupyter lab`.
+3. Start Jupyter notebook or Jupyter lab: `jupyter notebook` or `jupyter lab`
 
-To **run the experiment system**, please follow the instructions provided in [`experiment/README.md`](experiment/README.md)
-. The experiment frontend is implemented in React/Redux. The backend is implemented in Python, and uses Flask as an API layer with PostgreSQL as a database. To use this system for your own experiment, you can modify the [list of questions](experiment/questions.json), [referenced datasets](experiment/data), and [visual specifications](/experiment/system/frontend/src/specs.json).
+To **run the crowdsourced experiment**, please follow the instructions provided in [`experiment/README.md`](experiment/README.md)
+. The experiment frontend is implemented in React/Redux. The backend is implemented in Python, and uses Flask as an API layer with PostgreSQL as a database. To customize this system for your own experiment, you can modify the [list of questions](experiment/questions.json), [referenced datasets](experiment/data), and [visual specifications](/experiment/system/frontend/src/specs.json).
 
-<img src="/assets/viznet-system-preview.gif" width="600" />
+<p align="center">
+    <i>Pre-experiment screening questions</i>
+</p>
+
+<p align="center">
+    <kbd><img src="/assets/pre-experiment.gif" width="600" /></kbd>
+</p>
+
+<p align="center">
+    <i>Main portion of VizNet crowdsourced replication experiment</i>
+</p>
+
+<p align="center">
+    <kbd><img src="/assets/experiment.gif" width="600" /></kbd>
+</p>
