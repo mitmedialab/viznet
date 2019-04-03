@@ -22,86 +22,58 @@
   <!--[if IE]>
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-
   <div class="wrapper">
-	  <header>
-			<teaser>
-			</teaser>
-			<h1>
-				<b>VizNet</b><br>
-                <span>Towards a Visualization Learning and Benchmarking Repository</span>
-			</h1>
-			<img class="teaser" src="img/teaser.png" />
-	  </header>
-	  <section>
-        <p>
-			Collecting, curating, and cleaning data is a laborious and expensive process. Visualization researchers have relied on running studies with ad hoc, sometimes synthetically generated, datasets. However, such datasets do not display the same characteristics as data found in the wild. VizNet is a centralized and large-scale repository of data as used in practice, compiled from the web, open data repositories, and online visualization platforms.
-        </p>
+   <header>
+     <teaser>
+     </teaser>
+     <h1>
+      <b>VizNet</b><br>
+      <span>Towards a Visualization Learning and Benchmarking Repository</span>
+    </h1>
+    <img class="teaser" src="img/teaser.png" />
+  </header>
+  <section>
+    <h2>Abstract</h2>
+    <p>
+      Researchers currently rely on ad hoc datasets to train automated visualization tools and evaluate the effectiveness of visualization designs. These exemplars often lack the characteristics of real-world datasets, and their one-off nature makes it difficult to compare different techniques. In this paper, we present VizNet: a large-scale corpus of over 31 million datasets compiled from open data repositories and online visualization galleries. On average, these datasets comprise 17 records over 3 dimensions and across the corpus, we find 51% of the dimensions record categorical data, 44% quantitative, and only 5% temporal. VizNet provides the necessary common baseline for comparing visualization design techniques, and developing benchmark models and algorithms for automating visual analysis. To demonstrate VizNet's utility as a platform for conducting online crowdsourced experiments at scale, we replicate a prior study assessing the influence of user task and data distribution on visual encoding effectiveness, and extend it by considering an additional task: outlier detection. To contend with running such studies at scale, we demonstrate how a metric of perceptual effectiveness can be learned from experimental results, and show its predictive power across test datasets.
+   </p>
+ </section>
+ <section>
+  <h2>Resources</h2>
+  <div class="responsive-content">
+    <a href="img/2019-VizNet-CHI.pdf" target="_blank">Paper</a><span class="sep"></span><a href="https://github.com/viznetauthors/viznet" target="_blank">GitHub</a><span class="sep"></span><a href="https://youtube.com" target="_blank">Video</a>
+  </div>
+</section>
+<section>
+  <h2>Reference</h2>
 
-        <h2>Resources</h2>
-        <div class="responsive-content">
-            <a href="img/2019-VizNet-CHI.pdf" target="_blank">Paper</a><span class="sep"></span><a href="https://github.com/viznetauthors/viznet" target="_blank">GitHub</a><span class="sep"></span><a href="https://youtube.com" target="_blank">Video</a>
-        </div>
-	  </section>
-	  <section>
-        <h2>Reference</h2>
+  <div class="citation-container">
+    <div class="citation">Kevin Hu, Neil Gaikwad, Michiel Bakker, Madelon Hulsebos, Emanuel Zgraggen, César Hidalgo, Tim Kraska, Guoliang Li, Arvind Satyanarayan, and Çağatay Demiralp. 2019. VizNet: Towards a large-scale visualization learning and bench-marking repository. In Proceedings of the 2019 Conference on Human Factors in Computing Systems (CHI). ACM.</div>
+    <span class="citation-title">Plain Text</span>
+  </div>
 
-        <div class="citation-container">
-            <div class="citation">Kevin Hu, Neil Gaikwad, Michiel Bakker, Madelon Hulsebos, Emanuel Zgraggen, César Hidalgo, Tim Kraska, Guoliang Li, Arvind Satyanarayan, and Çağatay Demiralp. 2019. VizNet: Towards a large-scale visualization learning and bench-marking repository. In Proceedings of the 2019 Conference on Human Factors in Computing Systems (CHI). ACM.</div>
-            <span class="citation-title">Plain Text</span>
-        </div>
-
-        <div class="citation-container">
-            <div class="citation">@inproceedings{viznet,
-  title={VizNet: {T}owards a large-scale visualization learning and benchmarking repository},
-  author={Hu, Kevin and Gaikwad, Neil and Bakker, Michiel and Hulsebos, Madelon and Zgraggen, Emanuel and Hidalgo, C\'{e}sar and Kraska, Tim and Li, Guoliang and Satyanarayan, Arvind and Demiralp, {\c{C}}a{\u{g}}atay},
-  booktitle={Proceedings of the 2019 Conference on Human Factors in Computing Systems (CHI)},
-  year={2019},
-  publisher={ACM}
-}</div>
-            <span class="citation-title">BibteX</span>
-        </div>
-<!--         <div class="citation-container">
-    		<div class="citation">Kevin Hu, Neil Gaikwad, Michiel Bakker, Madelon Hulsebos, Emanuel Zgraggen, César Hidalgo, Tim Kraska, Guoliang Li, Arvind Satyanarayan, and Çağatay Demiralp. 2019. VizNet: Towards a large-scale visualization learning and bench-marking repository. In Proceedings of the 2019 Conference on Human Factors in Computing Systems (CHI). ACM.</div>
-            <span class="citation-title">Plain Text</span>
-        </div>
-
-        <div class="citation-container">
-    		<div class="citation">@inproceedings{viznet,
-  title={VizNet: {T}owards a large-scale visualization learning and benchmarking repository},
-  author={Hu, Kevin and Gaikwad, Neil and Bakker, Michiel and Hulsebos, Madelon and Zgraggen, Emanuel and Hidalgo, C\'{e}sar and Kraska, Tim and Li, Guoliang and Satyanarayan, Arvind and Demiralp, {\c{C}}a{\u{g}}atay},
-  booktitle={Proceedings of the 2019 Conference on Human Factors in Computing Systems (CHI)},
-  year={2019},
-  publisher={ACM}
-}</div>
-            <span class="citation-title">BibteX</span>
-        </div> -->
-	  </section>
-		<section>
-		<h2>People</h2>
-		<a href="http://kzh.space" target="_blank">Kevin Hu</a><span class="sep"></span><a href="http://web.media.mit.edu/~gaikwad/" target="_blank">Neil Gaikwad</a><span class="sep"></span><a href="https://www.media.mit.edu/people/bakker/overview" target="_blank">Michiel Bakker</a><span class="sep"></span><a href="https://github.com/madelonhulsebos" target="_blank">Madelon Hulsebos</a><span class="sep"></span><a href="http://emanuelzgraggen.com/" target="_blank">Emanuel Zgraggen</a><span class="sep"></span><a href="https://chidalgo.com/" target="_blank">César Hidalgo</a><span class="sep"></span><a href="https://chidalgo.com/" target="_blank">Tim Kraska</a><span class="sep"></span><a href="http://dbgroup.cs.tsinghua.edu.cn/ligl/" target="_blank">Guoliang Li</a><span class="sep"></span><a href="https://arvindsatya.com/" target="_blank">Arvind Satyanarayan</a><span class="sep"></span><a href="https://hci.stanford.edu/~cagatay/" target="_blank">Çağatay Demiralp</a>
-	  </section>
-	  <footer>
-		<div class="logos">
-			<a href="https://www.media.mit.edu" target="_blank"><img class="logo" src="img/ml.png" /></a>
-			<a href="https://www.tsinghua.edu.cn" target="_blank"><img class="logo" src="img/tsinghua.png"/></a>
-			<a href="https://www.csail.mit.edu" target="_blank"><img class="logo" src="img/csail.png" /></a>
-		</div>
-	  </footer>
-	</div>
-
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-	window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-	ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <div class="citation-container">
+    <div class="citation">@inproceedings{viznet,
+title={VizNet: {T}owards a large-scale visualization learning and benchmarking repository},
+author={Hu, Kevin and Gaikwad, Neil and Bakker, Michiel and Hulsebos, Madelon and Zgraggen, Emanuel and Hidalgo, C\'{e}sar and Kraska, Tim and Li, Guoliang and Satyanarayan, Arvind and Demiralp, {\c{C}}a{\u{g}}atay},
+booktitle={Proceedings of the 2019 Conference on Human Factors in Computing Systems (CHI)},
+year={2019},
+publisher={ACM}
+    }</div>
+    <span class="citation-title">BibteX</span>
+  </div>
+  <section>
+    <h2>People</h2>
+    <a href="http://kzh.space" target="_blank">Kevin Hu</a><span class="sep"></span><a href="http://web.media.mit.edu/~gaikwad/" target="_blank">Neil Gaikwad</a><span class="sep"></span><a href="https://www.media.mit.edu/people/bakker/overview" target="_blank">Michiel Bakker</a><span class="sep"></span><a href="https://github.com/madelonhulsebos" target="_blank">Madelon Hulsebos</a><span class="sep"></span><a href="http://emanuelzgraggen.com/" target="_blank">Emanuel Zgraggen</a><span class="sep"></span><a href="https://chidalgo.com/" target="_blank">César Hidalgo</a><span class="sep"></span><a href="https://chidalgo.com/" target="_blank">Tim Kraska</a><span class="sep"></span><a href="http://dbgroup.cs.tsinghua.edu.cn/ligl/" target="_blank">Guoliang Li</a><span class="sep"></span><a href="https://arvindsatya.com/" target="_blank">Arvind Satyanarayan</a><span class="sep"></span><a href="https://hci.stanford.edu/~cagatay/" target="_blank">Çağatay Demiralp</a>
+  </section>
+  <footer>
+    <div class="logos">
+     <a href="https://www.media.mit.edu" target="_blank"><img class="logo" src="img/ml.png" /></a>
+     <a href="https://www.tsinghua.edu.cn" target="_blank"><img class="logo" src="img/tsinghua.png"/></a>
+     <a href="https://www.csail.mit.edu" target="_blank"><img class="logo" src="img/csail.png" /></a>
+   </div>
+ </footer>
+</div>
 </body>
 
 </html>
