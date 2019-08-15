@@ -20,7 +20,7 @@
 
 ### Initialize database tables
 7. Create database tables: `flask create`
-8. Populate questions: `populate_questions`
+8. Populate questions: `flask populate_questions`
 
 ### Run server
 9. Run flask server: `flask run -p 9999`
