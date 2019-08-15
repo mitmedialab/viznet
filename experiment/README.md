@@ -3,7 +3,7 @@
 ## Running Experiment Frontend
 1. Enter `/system/frontend` directory
 2. Install frontend javascript dependencies: `npm install`
-2. Run using: `pip install -r requirements.txt`
+2. Run using: `npm start`
 4. Access in browser at `localhost:3000`
 
 ## Running Experiment Backend
