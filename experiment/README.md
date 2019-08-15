@@ -3,7 +3,7 @@
 ## Running Experiment Frontend
 1. Enter `/system/frontend` directory
 2. Install frontend javascript dependencies: `npm install`
-2. Run using: `pip install -r requirements.txt`
+2. Run using: `npm start`
 4. Access in browser at `localhost:3000`
 
 ## Running Experiment Backend
@@ -20,7 +20,7 @@
 
 ### Initialize database tables
 7. Create database tables: `flask create`
-8. Populate questions: `populate_questions`
+8. Populate questions: `flask populate_questions`
 
 ### Run server
 9. Run flask server: `flask run -p 9999`
