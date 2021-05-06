@@ -1,7 +1,7 @@
 alembic==1.0.0
 click==6.7
 Flask==1.0.2
-Flask-Cors==3.0.6
+Flask-Cors==3.0.9
 Flask-Migrate==2.2.1
 Flask-SQLAlchemy==2.3.2
 itsdangerous==0.24
