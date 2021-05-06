@@ -23,7 +23,7 @@
     "redux-thunk": "^2.3.0",
     "shortid": "^2.2.13",
     "typeface-roboto": "0.0.54",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "vega-embed": "3.0.0",
     "vega-lite": "2.0.0"
   },
