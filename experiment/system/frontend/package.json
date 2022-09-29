@@ -24,7 +24,7 @@
     "shortid": "^2.2.13",
     "typeface-roboto": "0.0.54",
     "underscore": "^1.9.1",
-    "vega-embed": "3.0.0",
+    "vega-embed": "3.30.0",
     "vega-lite": "2.0.0"
   },
   "proxy": "http://localhost:5000",
